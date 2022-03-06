@@ -13,12 +13,12 @@ class InitialPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextButton(
+            ElevatedButton(
               child: const Text('Go to SECOND'),
               onPressed: () => navigateToSecond(context),
             ),
             const SizedBox(height: 10),
-            TextButton(
+            ElevatedButton(
               child: const Text('Go to THIRD'),
               onPressed: () => navigateToThird(context),
             ),
