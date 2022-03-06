@@ -7,19 +7,19 @@ class InitialPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First Page'),
+        title: const Text('First Page'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            RaisedButton(
-              child: Text('Go to SECOND'),
+            TextButton(
+              child: const Text('Go to SECOND'),
               onPressed: () => navigateToSecond(context),
             ),
-            SizedBox(height: 10),
-            RaisedButton(
-              child: Text('Go to THIRD'),
+            const SizedBox(height: 10),
+            TextButton(
+              child: const Text('Go to THIRD'),
               onPressed: () => navigateToThird(context),
             ),
           ],

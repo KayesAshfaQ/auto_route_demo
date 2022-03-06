@@ -9,12 +9,11 @@ class SecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Second Page'),
+        title: const Text('Second Page'),
       ),
       body: Center(
         child: Text(
           userId,
-          //style: Theme.of(context).textTheme.display2,
         ),
       ),
     );

@@ -14,7 +14,7 @@ class ThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Third Page'),
+        title: const Text('Third Page'),
       ),
       body: Center(
         child: Column(
@@ -22,7 +22,6 @@ class ThirdPage extends StatelessWidget {
           children: <Widget>[
             Text(
               userName,
-              //style: Theme.of(context).textTheme.display2,
             ),
             Text(
               points.toString(),
