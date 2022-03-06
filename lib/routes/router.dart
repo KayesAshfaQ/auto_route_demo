@@ -6,9 +6,9 @@ import 'package:auto_route_demo/pages/third_page.dart';
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
   routes: [
-    AutoRoute(page: InitialPage, initial: true),
-    AutoRoute(page: SecondPage),
-    AutoRoute(page: ThirdPage),
+    AutoRoute(path: '/', page: InitialPage, initial: true),
+    AutoRoute(path: '/secondPage', page: SecondPage),
+    AutoRoute(path: '/thirdPage', page: ThirdPage),
   ],
 )
-class $Router {}
+class $AppRouter {}

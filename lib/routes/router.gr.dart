@@ -17,8 +17,8 @@ import '../pages/initial_page.dart' as _i1;
 import '../pages/second_page.dart' as _i2;
 import '../pages/third_page.dart' as _i3;
 
-class Router extends _i4.RootStackRouter {
-  Router([_i5.GlobalKey<_i5.NavigatorState>? navigatorKey])
+class AppRouter extends _i4.RootStackRouter {
+  AppRouter([_i5.GlobalKey<_i5.NavigatorState>? navigatorKey])
       : super(navigatorKey);
 
   @override
