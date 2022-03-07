@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:auto_route_demo/routes/router.gr.dart';
 import 'package:flutter/material.dart';
 
 class InitialPage extends StatelessWidget {
@@ -29,10 +31,14 @@ class InitialPage extends StatelessWidget {
   }
 
   void navigateToSecond(BuildContext context) {
-    // TODO: Implement with auto_route
+    context.router.push(
+      SecondRoute(userId: '100'),
+    );
   }
 
   void navigateToThird(BuildContext context) {
-    // TODO: Implement with auto_route
+    context.router.push(
+      ThirdRoute(userName: 'Kayes', points: 97),
+    );
   }
 }

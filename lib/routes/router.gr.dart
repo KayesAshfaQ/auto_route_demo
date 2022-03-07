@@ -24,29 +24,42 @@ class AppRouter extends _i4.RootStackRouter {
   @override
   final Map<String, _i4.PageFactory> pagesMap = {
     InitialRoute.name: (routeData) {
-      return _i4.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i1.InitialPage());
+      return _i4.CustomPage<dynamic>(
+          routeData: routeData,
+          child: const _i1.InitialPage(),
+          transitionsBuilder: _i4.TransitionsBuilders.zoomIn,
+          durationInMilliseconds: 200,
+          opaque: true,
+          barrierDismissible: false);
     },
     SecondRoute.name: (routeData) {
       final args = routeData.argsAs<SecondRouteArgs>();
-      return _i4.MaterialPageX<dynamic>(
+      return _i4.CustomPage<dynamic>(
           routeData: routeData,
-          child: _i2.SecondPage(key: args.key, userId: args.userId));
+          child: _i2.SecondPage(key: args.key, userId: args.userId),
+          transitionsBuilder: _i4.TransitionsBuilders.zoomIn,
+          durationInMilliseconds: 200,
+          opaque: true,
+          barrierDismissible: false);
     },
     ThirdRoute.name: (routeData) {
       final args = routeData.argsAs<ThirdRouteArgs>();
-      return _i4.MaterialPageX<dynamic>(
+      return _i4.CustomPage<dynamic>(
           routeData: routeData,
           child: _i3.ThirdPage(
-              key: args.key, userName: args.userName, points: args.points));
+              key: args.key, userName: args.userName, points: args.points),
+          transitionsBuilder: _i4.TransitionsBuilders.zoomIn,
+          durationInMilliseconds: 200,
+          opaque: true,
+          barrierDismissible: false);
     }
   };
 
   @override
   List<_i4.RouteConfig> get routes => [
         _i4.RouteConfig(InitialRoute.name, path: '/'),
-        _i4.RouteConfig(SecondRoute.name, path: '/second-page'),
-        _i4.RouteConfig(ThirdRoute.name, path: '/third-page')
+        _i4.RouteConfig(SecondRoute.name, path: '/secondPage'),
+        _i4.RouteConfig(ThirdRoute.name, path: '/thirdPage')
       ];
 }
 
@@ -63,7 +76,7 @@ class InitialRoute extends _i4.PageRouteInfo<void> {
 class SecondRoute extends _i4.PageRouteInfo<SecondRouteArgs> {
   SecondRoute({_i5.Key? key, required String userId})
       : super(SecondRoute.name,
-            path: '/second-page',
+            path: '/secondPage',
             args: SecondRouteArgs(key: key, userId: userId));
 
   static const String name = 'SecondRoute';
@@ -87,7 +100,7 @@ class SecondRouteArgs {
 class ThirdRoute extends _i4.PageRouteInfo<ThirdRouteArgs> {
   ThirdRoute({_i5.Key? key, required String userName, required int points})
       : super(ThirdRoute.name,
-            path: '/third-page',
+            path: '/thirdPage',
             args: ThirdRouteArgs(key: key, userName: userName, points: points));
 
   static const String name = 'ThirdRoute';

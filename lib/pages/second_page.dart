@@ -11,6 +11,7 @@ class SecondPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Second Page'),
       ),
+      backgroundColor: Colors.lightBlueAccent.shade100,
       body: Center(
         child: Text(
           userId,
